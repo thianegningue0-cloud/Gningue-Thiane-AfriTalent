@@ -1,0 +1,187 @@
+/* ===== COMMIT 3 : BASE CSS ===== */
+
+/* 1. Import Google Fonts - 2 polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* 2. Variables CSS : couleurs, polices, espacements - 6+ variables */
+:root {
+    /* Couleurs palette cohérente */
+    --couleur-fond: #1a1a2e;
+    --couleur-accent: #e94560;
+    --couleur-secondaire: #0f3460;
+    --couleur-texte: #333333;
+    --couleur-blanc: #ffffff;
+    --couleur-gris: #f5f5f5;
+    
+    /* Typographie */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Espacements */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    
+    /* Autres */
+    --rayon-bordure: 10px;
+    --transition: all 0.3s ease;
+}
+
+/* 3. Reset CSS + Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-gris);
+}
+
+/* Typographie appliquée */
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+/* palette cohérent*/
+a {
+    color: var(--couleur-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+/* navbar bootstrap customisée*/
+.navbar{
+    background-color: var(--couleur-secondaire);
+    padding: var(--spacing-sm) 0;
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. Layout général */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-lg) 0;
+}
+
+/* 5. Navbar stylisée */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--couleur-secondaire);
+    padding: var(--spacing-sm) var(--spacing-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--couleur-blanc);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.logo img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-nav .nav-link{
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85) !important; 
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--transition);
+    transition: var(--transition);
+
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active{
+    background-color: var(--couleur-accent); /* mettre en couleur rouge Accueil*/
+    color: #fff !important;
+
+}
+ /* Footer*/
+footer {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-blanc);
+    padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-xl);
+}
+
+footer h5 {
+    font-family: var(--font-heading);
+    color: var(--couleur-blanc);
+    margin-bottom: var(--spacing-md);
+}
+
+footer a {
+    color: #a8a8a8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+footer a:hover {
+    color: var(--couleur-accent);
+}
+
+footer .logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+footer .copyright {
+    border-top: 1px solid #1a1a2e;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    text-align: center;
+    color: #a8a8a8;
+    font-size: 0.9rem;
+}
