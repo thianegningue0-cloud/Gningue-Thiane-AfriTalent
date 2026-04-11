@@ -1,3 +1,4 @@
+
 /* ===== COMMIT 3 : BASE CSS ===== */
 
 /* 1. Import Google Fonts - 2 polices */
@@ -512,5 +513,42 @@ footer .copyright {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+
+/*--commit 5--*/
+/* TABLETTE */
+@media (max-width: 991.98px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .hero-section {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section .d-flex {
+    flex-direction: column;
+  }
+  
+  .hero-section .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }
 
