@@ -52,19 +52,19 @@ href="contact.html">Contact</a></li>
 <a href="freelances.html" class="btn btn-primary">Je cherche un freelance</a>
 <a href="freelances.html" class="btn btn-primary">Je suis un freelance</a> 
 
- <div class="row mt-5">
+ <div class="py-5 bg-light fade-in">
     <div class="col-md-4 stat-item">
-     <span class="stat-number d-block">+2 500 </span>
+     <span class="counter stat-number d-block" data-target="2500">0</span>
         <span class="stat-label">freelances</span>
      </div>
     
      <div class="col-md-4 stat-item">
-      <span class="stat-number d-block">+800</span> 
+      <span class="counter stat-number d-block " data-target="800">0</span> 
          <span class="stat-label">Pays représentés</span>
      </div>
 
       <div class="col-md-4 stat-item">
-     <span class="stat-number d-block">+12 000 </span> 
+     <span class="counter stat-number d-block" data-target="12000">0</span> 
         <span class="stat-label">réalisés</span>
 </div>
 </div> 
@@ -72,28 +72,39 @@ href="contact.html">Contact</a></li>
 </div>
 </section>
 
-<section id="commen-ca-marche">
+<section class="py-5 fade-in">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
         <h2>Comment ça marche ?</h2>
-        <p class="Sous-titre text-center">Lancez votre projet en 3 étapes simples</p>
-            <div class="bento-grid">
-                <div class="bento-item etape-1">
-                    <i class="fa fa-user-plus"></i>
+        <p class="text-muted">Lancez votre projet en 3 étapes simples</p>
+        </div>
+      </div>
+                <div class="row"> 
+                 <div class="col-md-4 mb-4">
+                   <div class="bento-item etape-1 h-100 p-4">
+                    <i class="fa fa-shield"></i>
                         <h3>1. Inscrivez-vous</h3>
-                        <p>Créer un compte en queques clics.
+                        <p>Créer un compte en quelques clics.
                         Présentez vos compétences et expériences.</p>
-                        
                     </div>
-        <div class="bento-item etape-2">
-            <i class="fa fa-handshake"></i>
-            <h3>2. Postez votre projet</h3>
-            <p>Décrivez votre besoin en quelques clics.Nos 500+ freelances africains qualifiés recoivent votre demande instanément.</p>
-        </div> 
-        <div class="bento-item etape-3">
-                <i class="fa fa-sheild"></i>
+                 </div>
+                <div class="col-md-4 mb-4">
+                  <div class="bento-item etape-2 h-100 p-4">
+                   <i class="fa fa-handshake"></i>
+                     <h3>2. Postez votre projet</h3>
+                       <p>Décrivez votre besoin en quelques clics. Nos 500+ freelances africains qualifiés recoivent votre demande instanément.</p>
+                 </div> 
+                </div>
+                 <div class="col-md-4 mb-4">
+             <div class="bento-item etape-3 h-100 p-4">
+                <i class="fa fa-shield"></i>
             <h3>3. Payez en sécurité</h3>
             <p>Collabarez via notre plateforme sécuritée. Le paiement est bloqué et libéré uniquement aprés votre validation.</p>
        </div>
     </div>
+</div>
+</div>
 </section>
 <!-- Section Services --> 
 <section class="categories py-5 bg-light"> 
@@ -172,14 +183,13 @@ href="contact.html">Contact</a></li>
 </div> 
 </section> 
 <!-- Section Temoignages --> 
-<section id="testimonials" class="py-5 bg-light">
+<section class="py-5 bg-light fade-in">
   <div class="container">
     <h2 class="text-center mb-4">Ce que nos utilisateurs disent</h2>
     
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         
-        <!-- Item 1 -->
         <div class="carousel-item active">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -199,7 +209,6 @@ href="contact.html">Contact</a></li>
           </div>
         </div>
 
-        <!-- Item 2 : CORRIGÉ class au lieu de id -->
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -219,7 +228,6 @@ href="contact.html">Contact</a></li>
           </div>
         </div>
 
-        <!-- Item 3 : à ajouter si tu l'as -->
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -240,8 +248,6 @@ href="contact.html">Contact</a></li>
         </div>
 
       </div>
-
-      <!-- LES FLÈCHES : À COLLER ICI APRÈS carousel-inner -->
       <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" style="background-color: #0d6efd; border-radius: 50%; padding: 1.5rem;"></span>
       </button>

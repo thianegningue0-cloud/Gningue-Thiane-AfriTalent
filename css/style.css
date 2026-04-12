@@ -514,6 +514,10 @@ footer .copyright {
   height: 10px;
   border-radius: 50%;
 }
+.card-img-top{
+  height: 280px; /*---force la meme hauteur pour toutes les images--*/
+  object-fit: cover; /*---coupe l'image sans la déformer--*/
+}
 
 /*--commit 5--*/
 /* TABLETTE */
@@ -571,3 +575,15 @@ body.dark-mode .card, body.dark-mode .form-control {
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   background-color: rgba(13, 110, 253, 0.9) !important;
 }
+/*----commit7----*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
