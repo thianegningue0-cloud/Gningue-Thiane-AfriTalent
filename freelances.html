@@ -45,7 +45,7 @@ href="contact.html">Contact</a></li>
 <div class="container py-5">
     <h2>Catalogue des Freelances</h2> 
     <div class="filter-bar mb-3">
-    <select id="categoty-select" class="form-select">
+    <select id="category-select" class="form-select">
         <option value="all">Toutes les catégories</option>
         <option value="developpeur-web">Développeur Web</option>
         <option value="designer-ui-ux">Designer UI/UX</option>
@@ -54,15 +54,14 @@ href="contact.html">Contact</a></li>
         <option value="scientifique">Scientifique</option>
         <option value="astronome">Astronome</option>
         <option value="physicien">Physicien</option>
-        <option value="ingénieur électrique">Ingénieur électrique</option>
+        <option value="ingenieur-electrique">Ingénieur électrique</option>
     </select>
 </div> 
 </section>
 <!--Grille des profils-->
-<section class="container">
-    <div class="row g-3" id="freelance-grid">
-        <h2>Nos Freelances</h2> 
-        <div class="col-lg-4 col-md-6 ">
+<section class="container"> 
+    <div class="row g-3" id="freelance-grid"> 
+        <div class="col-lg-4 col-md-6" data-category="developpeur-web">
         <div class="card shadow border-0 h-100">
           <img src="images/khalil6.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
                 <div class="card-body d-flex flex-column">
@@ -78,13 +77,15 @@ href="contact.html">Contact</a></li>
                     <span class="star empty">⭐</span>
                     <span class="note">(4/5)</span>
                 </div>
+                  <div class="mt-auto">
                    <a  href="#" class="btn btn-primary w-100">Voir le profil</a>
+                  </div>
 
                 </div> 
             </div>
         </div>
     
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" data-category="designer-ui-ux">
              <div class="card shadow border-0 h-100">
                 <img src="images/R3.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
                 <div class="card-body d-flex flex-column">
@@ -100,11 +101,13 @@ href="contact.html">Contact</a></li>
                     <span class="star empty">⭐</span>
                     <span class="note">(3/5)</span>
                 </div>
+                <div class="mt-auto">
                 <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                </div>
             </div>
         </div>
     </div>
-     <div class="col-lg-4 col-md-6">
+     <div class="col-lg-4 col-md-6" data-category="analyste-data">
         <div class="card shadow border-0 h-100">
                 <img src="images/tt55.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: center 40%;">
                 <div class="card-body d-flex flex-column">
@@ -120,11 +123,13 @@ href="contact.html">Contact</a></li>
                     <span class="star empty">⭐</span>
                     <span class="note">(4/5)</span>
                 </div>
+                <div class="mt-auto">
                 <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6" data-category="ingenieur-logiciel">
         <div class="card shadow border-0 h-100">
             <div class="card-body d-flex flex-column">
                 <img src="images/tt66.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
@@ -140,11 +145,13 @@ href="contact.html">Contact</a></li>
                     <span class="star empty">⭐</span>
                     <span class="note">(4/5)</span>
                 </div>
+                <div class="mt-auto">
                 <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                </div>
             </div>
         </div>
     </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" data-category="scientifique">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column">
                     <img src="images/thia6.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
@@ -160,11 +167,13 @@ href="contact.html">Contact</a></li>
                         <span class="star empty">⭐</span>
                         <span class="note">(3/5)</span>
                     </div>
-                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                    <div class="mt-auto">
+                    <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" data-category="physicien">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column">
                     <img src="images/tt88.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: center 40%;">
@@ -180,11 +189,13 @@ href="contact.html">Contact</a></li>
                         <span class="star empty">⭐</span>
                         <span class="note">(4/5)</span>
                     </div>
-                    <a href="#" class="btn btn-primary">Voir le profil</a>
+                    <div class="mt-auto">
+                    <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" data-category="astronome">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column">
                     <img src="images/tt22.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
@@ -200,11 +211,13 @@ href="contact.html">Contact</a></li>
                         <span class="star empty">⭐</span>
                         <span class="note">(4/5)</span>
                     </div>
+                    <div class="mt-auto">
                     <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" data-category="ingenieur-electrique">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column">
                     <img src="images/tt11.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: top;">
@@ -220,11 +233,13 @@ href="contact.html">Contact</a></li>
                         <span class="star empty">⭐</span>
                         <span class="note">(3/5)</span>
                     </div>
+                    <div class="mt-auto">
                     <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6" data-category="developpeuse">
             <div class="card shadow border-0 h-100">
                 <div class="card-body d-flex flex-column">
                     <img src="images/bb66.jpeg" class="card-top" style="height: 280px; object-fit: cover; object-position: center 20%;">
@@ -240,7 +255,9 @@ href="contact.html">Contact</a></li>
                         <span class="star empty">⭐</span>
                         <span class="note">(4/5)</span>
                     </div>
+                    <div class="mt-auto">
                     <a href="#" class="btn btn-primary" w-100>Voir le profil</a>
+                    </div>
                 </div>
             </div>
         </div>

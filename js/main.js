@@ -82,4 +82,81 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 }); // Déclenche à 50% de visibilité
 
 counters.forEach(counter => counterObserver.observe(counter));
+/*---commit 8---*/
+// FILTRAGE FREELANCES PAR SELECLT
+const categorySelect = document.getElementById('category-select');
+const freelanceCards = document.querySelectorAll('#freelance-grid .col-lg-4');
+
+if (categorySelect) {
+  categorySelect.addEventListener('change', () => {
+    const selectedCategory = categorySelect.value;
+    
+    freelanceCards.forEach(card => {
+      const cardCategory = card.dataset.category;
+      
+      if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
+
+// VALIDATION FORMULAIRE
+const form = document.getElementById('contactForm');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let isValid = true;
+  
+  // Reset erreurs
+  form.querySelectorAll('.form-control').forEach(input => {
+    input.classList.remove('is-invalid');
+  });
+  document.getElementById('successMessage').classList.add('d-none');
+  
+  // 1. Nom requis
+  const nom = document.getElementById('nom');
+  if (nom.value.trim() === '') {
+    nom.classList.add('is-invalid');
+    isValid = false;
+  }
+   
+  //2.Prénom requis
+   const prenom = document.getElementById('prenom');
+  if (nom.value.trim() === '') {
+    prenom.classList.add('is-invalid');
+    isValid = false;
+  }
+  
+  // 2. Email regex
+  const email = document.getElementById('email');
+  if (!emailRegex.test(email.value.trim())) {
+    email.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  //4. Sujet requis
+  const sujet = document.getElementById('sujet');
+  if (!emailRegex.test(email.value.trim())) {
+    sujet.classList.add('is-invalid');
+    isValid = false;
+  }
+  
+  // 5. Message min 20 caractères
+  const message = document.getElementById('message');
+  if (message.value.trim().length < 20) {
+    message.classList.add('is-invalid');
+    isValid = false;
+  }
+  
+  // Succès
+  if (isValid) {
+    document.getElementById('successMessage').classList.remove('d-none');
+    form.reset();
+    // Ici tu ferais l’envoi AJAX en vrai
+  }
+});
 
